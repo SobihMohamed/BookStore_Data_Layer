@@ -26,7 +26,7 @@ namespace Presentation
             Console.WriteLine("======================================");
             Console.WriteLine("    Book Store Initialized    ");
             Console.WriteLine("======================================\n");
-            using (var scope = serviceProvider.CreateScope())
+            await using (var scope = serviceProvider.CreateAsyncScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<BookDbContext>();
 
