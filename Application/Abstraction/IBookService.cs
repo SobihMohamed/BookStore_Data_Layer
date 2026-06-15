@@ -1,9 +1,6 @@
 ﻿using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Domain.Abstraction
+namespace Application.Abstraction
 {
     public interface IBookService
     {
