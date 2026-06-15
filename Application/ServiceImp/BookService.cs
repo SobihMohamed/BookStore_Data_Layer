@@ -1,10 +1,7 @@
-﻿using Application.Specifications;
-using Domain.Abstraction;
+﻿using Application.Abstraction;
+using Application.Specifications;
 using Domain.Contracts.UnitOfWorkPattern;
 using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Application.ServiceImp
 {

@@ -14,8 +14,6 @@ namespace Application.Specifications
             AddInclude(b => b.Category);
             AddInclude(b => b.Author);
 
-            // Task 15: Read-only query (No Tracking)
-            ApplyNoTracking();
 
             // Task 11: Search by keyword (Case-Insensitive)
             if (!string.IsNullOrEmpty(searchKeyword))
@@ -25,13 +23,14 @@ namespace Application.Specifications
 
             // Task 12: Pagination
             ApplyPagenation(pageSize, pageIndex);
+            // Task 15: Read-only query (No Tracking)
+            ApplyNoTracking();
         }
 
         public BookWithDetailsSpec(int id) : base(b => b.Id == id)
         {
             AddInclude(b => b.Category);
             AddInclude(b => b.Author);
-            ApplyNoTracking();
         }
     }
 }
